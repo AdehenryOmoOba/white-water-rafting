@@ -1,0 +1,16 @@
+Hello guys, 
+
+first of all, i want to thank you for the feedback and encouragement i got from you all from that last video. I really appreciate it.
+ 
+ *Dont forget to click on the like and subscribe bottons please. You can also share the link with your friends too to help more people. Thank you.
+
+task:
+
+ - Pseudocode for week 5 milestone
+
+  *Always make sure you understand the requirements before writing pseudocode.
+
+
+ - Actual code similar to week 5 milestone task
+
+(Respect the CES Honor code of academic honesty)
