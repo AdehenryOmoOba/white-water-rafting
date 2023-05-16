@@ -32,7 +32,7 @@ while True:
             if menu_list[action_index] == "add item":
                 print()
                 item_name = input("What item would you like to add? ")
-                item_list.append(item_name)
+                item_list.append(item_name.capitalize())
                 print()
                 print(f"Success:'{item_name}' has been added to the cart ✔️")
             if menu_list[action_index] == "view cart":
