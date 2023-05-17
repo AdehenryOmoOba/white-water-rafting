@@ -19,22 +19,23 @@
 # End
 
 menu_list = ["buy foodstuff", "buy drinks", "view order", "quit"]
+
 item_list = []
 
 print()
 
 while True:
     print()
-    print("Please select one of the following")
+    print("Please select one of the following: ")
     print()
     
     for i in range(len(menu_list)):
-        print(f"{i + 1}. {menu_list[i].capitalize()} ")
+        print(f"{i + 1 }. {menu_list[i].capitalize()} ")
     
     print()
     
     try:
-        action_index = int(input("Please enter an action: "))
+        action_index = int(input("Please select an action: "))
         
         action_index -= 1
         
@@ -49,13 +50,14 @@ while True:
                 food = input("What foodstuff do you want to buy? ")
                 item_list.append(food.capitalize())
                 print()
-                print(f"Success: {food} has been added to your order ✔️")
+                print(f"Success: '{food}' has been added to your order ✔️")
             if menu_list[action_index] == "buy drinks":
                 print()
                 drink = input("What drink do you want to buy? ")
                 item_list.append(drink.capitalize())
+                
                 print()
-                print(f"Success: {drink} has been added to your order ✔️")
+                print(f"Success: '{drink}' has been added to your order ✔️")
             if menu_list[action_index] == "view order":
                 for item in item_list:
                     print(f"- {item}")
