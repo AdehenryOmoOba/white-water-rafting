@@ -57,3 +57,31 @@
 # print()
 # print(story)
 # print()
+
+# with open("./week06/books.txt") as books_of_mormon:
+#     for book in books_of_mormon:
+#         print(book.strip())
+
+# shopping_cart = [
+#     ["Chips", 2.99],
+#     ["Bread", 2.50],
+#     ["Milk", 3.19],
+#     ["Ice Cream", 6.99],
+#     ["Cheese", 5.99],
+#     ["Candy bar", 0.99]
+# ]
+
+# most_expensive = shopping_cart[0]
+
+# for item in enumerate(shopping_cart):
+#     (index, shop_item) = item
+#     if shop_item[1] > most_expensive[1]:
+#         most_expensive = shop_item
+
+# print(most_expensive)
+
+
+
+
+
+        
