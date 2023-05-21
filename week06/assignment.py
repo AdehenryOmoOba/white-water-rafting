@@ -1,9 +1,13 @@
+# I added a logic to compute the percentage difference in life expectancy between the country with highest life expectance and country with 
+# lowest life expectance in the year of interest.
+
 year_of_interest_count = 0
 year_of_interest_life_expectancy_sum = 0
 year_of_interest_max_life_expectancy = 0
 year_of_interest_min_life_expectancy = 1_000_000_000
 year_of_interest_min_life_expectancy_country = ""
 year_of_interest_max_life_expectancy_country = ""
+year_of_interest_average_life_expectancy = 0
 
 min_life_expectancy = 1_000_000_000
 min_life_expectancy_country = ""
@@ -13,7 +17,6 @@ max_life_expectancy = 0
 max_life_expectancy_country = ""
 max_life_expectancy_year = ""
 
-average_life_expectancy = 0
 
 print()
 print("Welcome to data analysis console 📈")
@@ -54,15 +57,17 @@ try:
                         year_of_interest_max_life_expectancy = current_life_expectancy
                         year_of_interest_max_life_expectancy_country = data.strip().split(',')[0]
     
-    average_life_expectancy = year_of_interest_life_expectancy_sum / year_of_interest_count
+    year_of_interest_average_life_expectancy = year_of_interest_life_expectancy_sum / year_of_interest_count
 
     print(f"The overall max life expectancy is: {max_life_expectancy} from {max_life_expectancy_country} in {max_life_expectancy_year}")
     print(f"The overall min life expectancy is: {min_life_expectancy} from {min_life_expectancy_country} in {min_life_expectancy_year}")
     print()
     print(f"For the year {year_of_interest}: ")
-    print(f"The average life expectancy across all countries was {round(average_life_expectancy, 2)}")
+    print(f"The average life expectancy across all countries was {round(year_of_interest_average_life_expectancy, 2)}")
     print(f"The max life expectancy was in {year_of_interest_max_life_expectancy_country} with {year_of_interest_max_life_expectancy}")
     print(f"The min life expectancy was in {year_of_interest_min_life_expectancy_country} with {year_of_interest_min_life_expectancy}")
+    percentage_difference = ((year_of_interest_max_life_expectancy - year_of_interest_min_life_expectancy) / year_of_interest_min_life_expectancy) * 100
+    print(f"This means that {year_of_interest_max_life_expectancy_country} had {round(percentage_difference, 2)}% more life expactancy than {year_of_interest_min_life_expectancy_country} in the year {year_of_interest}")
     print()
     print(lines)
 except:
