@@ -46,3 +46,62 @@
 #         Display an error message indicating an invalid option was chosen.
 # End of the loop.
 # End
+
+
+menu_list = ["add item", "view cart", "remove item", "compute total", "quit"];
+
+item_list = [];
+
+price_list = [];
+
+while True:
+    
+    print("Please enter one of the following: ")
+    
+    for i in range(len(menu_list)):
+        print(f"{i + 1}. {menu_list[i].capitalize()}")
+    
+    try:
+        
+        action_index = int(input("Please enter an action: "))
+        
+        action_index = action_index - 1
+        
+        if(action_index < len(menu_list)):
+            if menu_list[action_index] == "quit":
+                print("Thank you. Byeeeeee 👋")
+                break
+            elif menu_list[action_index] == "add item":
+                item_name = input("Name of item: ")
+                item_price = float(input("Price of item: "))
+                item_price = "{:.2f}".format(item_price)
+                item_list.append(item_name)
+                price_list.append(item_price)
+                print("Item added to cart successfully ✔️")
+            elif menu_list[action_index] == "view cart":
+                for i in range(len(item_list)):
+                    item = item_list[i]
+                    price = price_list[i]
+                    print(f"{i + 1}. {item} - ${price}")
+            elif menu_list[action_index] == "compute total":
+                cart_total = 0
+                for price in price_list:
+                    cart_total = cart_total + price
+                formatted_cart_total = "{:.2f}".format(cart_total)
+                print(f"The total price of cart items: ${formatted_cart_total}")
+            elif menu_list[action_index] == "remove item":
+                item_index = int(input("Which item do you want to remove from cart? "))
+                item_index = item_index - 1
+                
+                if 0 <= item_index < len(item_list):
+                    removed_item = item_list.pop(item_index)
+                    price_list.pop(item_index)
+                    price_list("Item deleted successfully")
+                else:
+                    print("Error: Invalid item number")
+            
+            else:
+                print("Error: Invalid action number")
+    except:
+        print("Error: Invalid option")
+        

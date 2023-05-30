@@ -80,5 +80,5 @@ while True:
             print()
             print("❌ Error: You have selected an invalid action")
     except:
-        print()
+        print()    
         print("❌ Error: Invalid option")    
